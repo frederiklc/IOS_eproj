@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct IOS_eprojApp: App {
+    
+    @StateObject var ViewRoute = viewRouter()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(ViewRoute: ViewRoute) // contentview's viewRouter will now be able to observe and access the viewRouter's observableObject
         }
     }
 }

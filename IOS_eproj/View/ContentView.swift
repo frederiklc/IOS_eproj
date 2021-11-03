@@ -5,16 +5,27 @@
 //  Created by Frederik Lindvig Christensen on 03/11/2021.
 //
 
+// rootView here
+
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        MainPageView()
+
+    @StateObject var ViewRoute: viewRouter // Her giver vi muligheden for ContentView at "observere" ViewRouter, hvis views er koblet op på vores ObservableObject i ModelData.
+    
+    var body: some View { // angiv herunder vores views, med lignende parametre
+        
+        switch ViewRoute.pageView {
+        case .page1:
+            MainPageView(ViewRoute: ViewRoute)
+        case .page2:
+            IngredientList(ViewRoute: ViewRoute)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(ViewRoute: viewRouter())
     }
 }

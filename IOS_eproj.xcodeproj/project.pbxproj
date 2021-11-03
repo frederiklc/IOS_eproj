@@ -13,6 +13,7 @@
 		F930660927326E700034C65A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F930660827326E700034C65A /* Preview Assets.xcassets */; };
 		F9306613273270470034C65A /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9306612273270470034C65A /* MainPageView.swift */; };
 		F9306615273270500034C65A /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9306614273270500034C65A /* ModelData.swift */; };
+		F930661727327D160034C65A /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930661627327D160034C65A /* IngredientList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		F930660827326E700034C65A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F9306612273270470034C65A /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		F9306614273270500034C65A /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		F930661627327D160034C65A /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,8 +93,9 @@
 		F9306611273270370034C65A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F9306612273270470034C65A /* MainPageView.swift */,
 				F930660327326E6B0034C65A /* ContentView.swift */,
+				F9306612273270470034C65A /* MainPageView.swift */,
+				F930661627327D160034C65A /* IngredientList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F930660427326E6B0034C65A /* ContentView.swift in Sources */,
+				F930661727327D160034C65A /* IngredientList.swift in Sources */,
 				F9306615273270500034C65A /* ModelData.swift in Sources */,
 				F930660227326E6B0034C65A /* IOS_eprojApp.swift in Sources */,
 				F9306613273270470034C65A /* MainPageView.swift in Sources */,
