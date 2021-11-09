@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @StateObject var ViewRoute: viewRouter // Her giver vi muligheden for ContentView at "observere" ViewRouter, hvis views er koblet op på vores ObservableObject i ModelData.
+    @StateObject var ViewRoute: viewRouter // Her giver vi muligheden for ContentView at "observere" ViewRouter, vis views er koblet op på vores ObservableObject i ModelData.
     
     var body: some View { // angiv herunder vores views, med lignende parametre
         
