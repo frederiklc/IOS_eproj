@@ -14,6 +14,7 @@
 		F9306613273270470034C65A /* MainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9306612273270470034C65A /* MainPageView.swift */; };
 		F9306615273270500034C65A /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9306614273270500034C65A /* ModelData.swift */; };
 		F930661727327D160034C65A /* IngredientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930661627327D160034C65A /* IngredientList.swift */; };
+		F930661A273EC1E80034C65A /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9306618273EC1E70034C65A /* CoreDataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		F9306612273270470034C65A /* MainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageView.swift; sourceTree = "<group>"; };
 		F9306614273270500034C65A /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		F930661627327D160034C65A /* IngredientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientList.swift; sourceTree = "<group>"; };
+		F9306619273EC1E80034C65A /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F930660F273270290034C65A /* Model */,
 				F930660527326E700034C65A /* Assets.xcassets */,
 				F930660727326E700034C65A /* Preview Content */,
+				F9306618273EC1E70034C65A /* CoreDataModel.xcdatamodeld */,
 			);
 			path = IOS_eproj;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			files = (
 				F930660427326E6B0034C65A /* ContentView.swift in Sources */,
 				F930661727327D160034C65A /* IngredientList.swift in Sources */,
+				F930661A273EC1E80034C65A /* CoreDataModel.xcdatamodeld in Sources */,
 				F9306615273270500034C65A /* ModelData.swift in Sources */,
 				F930660227326E6B0034C65A /* IOS_eprojApp.swift in Sources */,
 				F9306613273270470034C65A /* MainPageView.swift in Sources */,
@@ -375,6 +379,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9306618273EC1E70034C65A /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9306619273EC1E80034C65A /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = F9306619273EC1E80034C65A /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F93065F627326E6B0034C65A /* Project object */;
 }
