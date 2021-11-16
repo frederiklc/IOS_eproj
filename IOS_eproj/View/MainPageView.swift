@@ -34,12 +34,12 @@ struct MainPageView: View {
                 Button(action: {
                     ViewRoute.pageView = .page2
                 }) {
-                    NextButton() // <-------
+                    ButtonStand() // <-------
                 }
                 Button(action: {
                     ViewRoute.pageView = .page4 // AddIngredient
                 }) {
-                    NextButton() // <-------
+                    ButtonStand() // <-------
                 }
             }
         }

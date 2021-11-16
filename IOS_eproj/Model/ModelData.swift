@@ -8,20 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct NextButton: View {
+struct ButtonStand: View {
     var body: some View {
         Text("Next Page")
-            .frame(width: 200.0, height: 20.0)
-            .foregroundColor(.white)
-            .padding()
-            .background(Color.blue)
-            .cornerRadius(8)
-    }
-}
-
-struct PreviousButton: View {
-    var body: some View {
-        return Text("Return")
             .frame(width: 200.0, height: 20.0)
             .foregroundColor(.white)
             .padding()
