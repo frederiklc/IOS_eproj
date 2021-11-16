@@ -9,13 +9,17 @@ import Foundation
 import SwiftUI
 
 struct ButtonStand: View {
+    var ButtText: String
     var body: some View {
-        Text("This has some function")
+        Text("\(ButtText)")
             .frame(width: 200.0, height: 20.0)
             .foregroundColor(.white)
             .padding()
             .background(Color.blue)
             .cornerRadius(8)
+    }
+    init(ButtText: String) {
+        self.ButtText = ButtText
     }
 }
 
