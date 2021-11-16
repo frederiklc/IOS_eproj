@@ -8,13 +8,49 @@
 import SwiftUI
 
 struct YourIngredients: View {
+    
+    @StateObject var ViewRoute: viewRouter
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            VStack() {
+                Text("Markér ingredienser i dit køleskab")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding(20)
+                
+                Spacer()
+                    .frame(height: 18.0)
+                
+                Text("Liste her")
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.red)
+                    .padding(.bottom,100)
+                    .padding(.top,100)
+                
+                Spacer()
+                    .frame(height: 10)
+                
+                Button(action: {
+                    ViewRoute.pageView = .page1
+                }) {
+                    PreviousButton() // <-------
+                }
+                Button(action: {
+                    ViewRoute.pageView = .page1
+                }) {
+                    PreviousButton() // <-------
+                }
+                Text("side 2")
+                
+            }
+        }
     }
 }
 
 struct YourIngredients_Previews: PreviewProvider {
     static var previews: some View {
-        YourIngredients()
+        YourIngredients(ViewRoute: viewRouter())
     }
 }
