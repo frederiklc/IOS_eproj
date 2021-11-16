@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ButtonStand: View {
     var body: some View {
-        Text("Next Page")
+        Text("This has some function")
             .frame(width: 200.0, height: 20.0)
             .foregroundColor(.white)
             .padding()
