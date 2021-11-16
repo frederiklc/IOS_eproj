@@ -35,12 +35,12 @@ struct YourIngredients: View {
                 Button(action: {
                     ViewRoute.pageView = .page1
                 }) {
-                    ButtonStand(ButtText: "Something") // <-------
+                    ButtonStand(ButtText: "Ingredients list") // <-------
                 }
                 Button(action: {
                     ViewRoute.pageView = .page1
                 }) {
-                    ButtonStand(ButtText: "Something") // <-------
+                    ButtonStand(ButtText: "Your Ingredients") // <-------
                 }
             }
         }
