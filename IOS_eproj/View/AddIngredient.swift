@@ -12,26 +12,25 @@ struct AddIngredient: View {
     @StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        ZStack {
-            HStack {
-                Button(action: {
-                    ViewRoute.pageView = .page1
-                }) {
-                    backButton()
+        NavigationView {
+            Form {
+                Section {
+                    Text("Hello, world!")
                 }
             }
-            .padding(.leading, -150)
-            .padding(.top, -350)
-            
-            
-            VStack {
-                Text("Hej")
-            }
-            
+            .navigationTitle("Add Ingredients")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
+/*
+ Button(action: {
+ ViewRoute.pageView = .page1
+ }) {
+ backButton()
+ }
+ */
 
 struct AddIngredient_Previews: PreviewProvider {
     static var previews: some View {
