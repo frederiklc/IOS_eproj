@@ -14,7 +14,7 @@ struct YourIngredients: View {
     var body: some View {
         ZStack {
             VStack() {
-                Text("Markér ingredienser i dit køleskab")
+                Text("Your current ingredients")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
@@ -23,14 +23,6 @@ struct YourIngredients: View {
                 Spacer()
                     .frame(height: 18.0)
                 
-                Text("Liste her")
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.red)
-                    .padding(.bottom,100)
-                    .padding(.top,100)
-                
-                Spacer()
-                    .frame(height: 10)
                 
                 Button(action: {
                     ViewRoute.pageView = .page3
@@ -42,6 +34,17 @@ struct YourIngredients: View {
                 }) {
                     ButtonStand(ButtText: "Possible Recipes")
                 }
+                
+                Spacer()
+                    .frame(height: 10)
+                
+                Text("Liste her")
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.red)
+                    .padding(.bottom,100)
+                    .padding(.top,100)
+                
+
             }
         }
     }
