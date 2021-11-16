@@ -12,9 +12,20 @@ struct YourIngredients: View {
     @StateObject var ViewRoute: viewRouter
     
     var body: some View {
+        
         ZStack {
             VStack() {
-                Text("Your current ingredients")
+                HStack {
+                    Button(action: {
+                        ViewRoute.pageView = .page1
+                    }) {
+                        backButton()
+                    }
+                }
+                .padding(.leading, -140.0)
+                .padding(.top, -30.0)
+                
+                Text("Markér ingredienser i dit køleskab")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)

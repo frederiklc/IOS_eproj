@@ -23,7 +23,25 @@ struct ButtonStand: View {
     }
 }
 
-// ********** Page enum  **********
+// Image(systemName: "chevron.right.circle")
+
+struct backButton: View {
+    var body: some View {
+        HStack {
+            Image(systemName: "chevron.right.circle")
+                .frame(width: 2.0, height: 2.0)
+                .rotationEffect(.degrees(180))
+                .foregroundColor(.blue)
+            Text("Retur")
+                .font(.footnote)
+                .padding(.leading, 5.0)
+        }
+    }
+}
+
+
+
+// ********** Amount of views  **********
 
 enum Pages {
     case page1
@@ -38,5 +56,4 @@ enum Pages {
 class viewRouter: ObservableObject {
     
     @Published var pageView: Pages = .page1 // fortæller contentView at den skal opdatere dens indhold/body, med MainPageView som default
-    
 }

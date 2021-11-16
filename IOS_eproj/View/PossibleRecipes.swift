@@ -12,7 +12,17 @@ struct Possiblerecipes: View {
     @StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        Text("Her skal der være noget Web-hentning")
+        ZStack {
+            VStack {
+                Text("Her skal der være noget Web-hentning")
+                
+                Button(action: {
+                    ViewRoute.pageView = .page2
+                }) {
+                    ButtonStand(ButtText: "www.pornhub.com") // <-------
+                }
+            }
+        }
     }
     
     struct Possiblerecipes_Previews: PreviewProvider {
