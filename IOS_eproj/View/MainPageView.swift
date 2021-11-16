@@ -19,11 +19,11 @@ struct MainPageView: View {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding(20)
-
+                
                 Spacer()
                     .frame(height: 18.0)
                 
-                Image("ShoppingCart")
+                Image(systemName: "swift")
                     .resizable()
                     .frame(width: 200, height: 200)
                     .padding()
