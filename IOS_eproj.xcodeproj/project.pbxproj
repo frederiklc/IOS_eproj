@@ -10,6 +10,7 @@
 		BBAA816F2743C74300BC3F1B /* YourIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA816E2743C74300BC3F1B /* YourIngredients.swift */; };
 		BBAA81712743C78900BC3F1B /* AddIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA81702743C78900BC3F1B /* AddIngredient.swift */; };
 		BBAA81782743E24A00BC3F1B /* IngredientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA81772743E24A00BC3F1B /* IngredientsModel.swift */; };
+		BBAA819D274425F700BC3F1B /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA819C274425F700BC3F1B /* Persistance.swift */; };
 		F930660227326E6B0034C65A /* IOS_eprojApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930660127326E6B0034C65A /* IOS_eprojApp.swift */; };
 		F930660427326E6B0034C65A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930660327326E6B0034C65A /* ContentView.swift */; };
 		F930660627326E700034C65A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F930660527326E700034C65A /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		BBAA816E2743C74300BC3F1B /* YourIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourIngredients.swift; sourceTree = "<group>"; };
 		BBAA81702743C78900BC3F1B /* AddIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredient.swift; sourceTree = "<group>"; };
 		BBAA81772743E24A00BC3F1B /* IngredientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModel.swift; sourceTree = "<group>"; };
+		BBAA819C274425F700BC3F1B /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
 		F93065FE27326E6B0034C65A /* IOS_eproj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_eproj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F930660127326E6B0034C65A /* IOS_eprojApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_eprojApp.swift; sourceTree = "<group>"; };
 		F930660327326E6B0034C65A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				F93066102732702F0034C65A /* ViewModel */,
 				F930660F273270290034C65A /* Model */,
 				F930660527326E700034C65A /* Assets.xcassets */,
+				BBAA819C274425F700BC3F1B /* Persistance.swift */,
 				F930660727326E700034C65A /* Preview Content */,
 				F9306618273EC1E70034C65A /* CoreDataModel.xcdatamodeld */,
 			);
@@ -185,6 +188,7 @@
 				BBAA81782743E24A00BC3F1B /* IngredientsModel.swift in Sources */,
 				BBAA81712743C78900BC3F1B /* AddIngredient.swift in Sources */,
 				F930660427326E6B0034C65A /* ContentView.swift in Sources */,
+				BBAA819D274425F700BC3F1B /* Persistance.swift in Sources */,
 				BBAA816F2743C74300BC3F1B /* YourIngredients.swift in Sources */,
 				F930661727327D160034C65A /* PossibleRecipes.swift in Sources */,
 				F930661A273EC1E80034C65A /* CoreDataModel.xcdatamodeld in Sources */,
