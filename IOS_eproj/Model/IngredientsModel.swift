@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+/*
 @propertyWrapper
 struct Ingredients {
     private var name: String
@@ -27,4 +27,4 @@ struct ListOfIngr{
         self.IngrList.append(t)
     }
 }
-
+ */

@@ -14,7 +14,7 @@ struct MainPageView: View {
     var body: some View {
         ZStack {
             VStack() {
-                Text("NoWaste Recipes")
+                Text("iFridge")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)

@@ -14,20 +14,27 @@ struct Possiblerecipes: View {
     var body: some View {
         ZStack {
             VStack {
+                Button(action: {
+                    ViewRoute.pageView = .page1
+                }) {
+                    backButton()
+                }
+                
                 Text("Her skal der være noget Web-hentning")
                 
                 Button(action: {
                     ViewRoute.pageView = .page2
                 }) {
-                    ButtonStand(ButtText: "www.pornhub.com") // <-------
+                    ButtonStand(ButtText: "www.ratemypoo.com") // <-------
                 }
             }
         }
     }
-    
-    struct Possiblerecipes_Previews: PreviewProvider {
-        static var previews: some View {
-            Possiblerecipes(ViewRoute: viewRouter())
-        }
+}
+
+struct Possiblerecipes_Previews: PreviewProvider {
+    static var previews: some View {
+        Possiblerecipes(ViewRoute: viewRouter())
     }
 }
+
