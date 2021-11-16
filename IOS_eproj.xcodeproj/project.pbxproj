@@ -102,9 +102,9 @@
 			children = (
 				F930660327326E6B0034C65A /* ContentView.swift */,
 				F9306612273270470034C65A /* MainPageView.swift */,
-				F930661627327D160034C65A /* PossibleRecipes.swift */,
 				BBAA816E2743C74300BC3F1B /* YourIngredients.swift */,
 				BBAA81702743C78900BC3F1B /* AddIngredient.swift */,
+				F930661627327D160034C65A /* PossibleRecipes.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

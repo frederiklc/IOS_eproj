@@ -35,12 +35,12 @@ struct YourIngredients: View {
                 Button(action: {
                     ViewRoute.pageView = .page1
                 }) {
-                    ButtonStand(ButtText: "Return to Mainpage") // <-------
+                    ButtonStand(ButtText: "Return to Mainpage")
                 }
                 Button(action: {
                     ViewRoute.pageView = .page3
                 }) {
-                    ButtonStand(ButtText: "Add Ingredient") // <-------
+                    ButtonStand(ButtText: "Add Ingredient")
                 }
             }
         }
