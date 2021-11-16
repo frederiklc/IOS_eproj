@@ -19,7 +19,9 @@ struct ContentView: View {
         case .page1:
             MainPageView(ViewRoute: ViewRoute)
         case .page2:
-            IngredientList(ViewRoute: ViewRoute)
+            YourIngredients(ViewRoute: ViewRoute)
+        case .page3:
+            AddIngredient(ViewRoute: ViewRoute)
         }
     }
 }

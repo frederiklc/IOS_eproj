@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NextButton: View {
     var body: some View {
-        Text("Næste side")
+        Text("Next Page")
             .frame(width: 200.0, height: 20.0)
             .foregroundColor(.white)
             .padding()
@@ -21,7 +21,7 @@ struct NextButton: View {
 
 struct PreviousButton: View {
     var body: some View {
-        return Text("Tilbage")
+        return Text("Return")
             .frame(width: 200.0, height: 20.0)
             .foregroundColor(.white)
             .padding()
@@ -35,6 +35,8 @@ struct PreviousButton: View {
 enum Pages {
     case page1
     case page2
+    case page3
+    case page4
     // her tilføjes flere cases, når flere views er oprettet
 }
 

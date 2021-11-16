@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct AddIngredient: View {
+    
+    @StateObject var ViewRoute: viewRouter
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +18,6 @@ struct AddIngredient: View {
 
 struct AddIngredient_Previews: PreviewProvider {
     static var previews: some View {
-        AddIngredient()
+        AddIngredient(ViewRoute: viewRouter())
     }
 }
