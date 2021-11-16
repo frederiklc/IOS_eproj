@@ -7,10 +7,16 @@
 
 import Foundation
 
+@propertyWrapper
 struct Ingredients {
-    var name: String
-    var category: String
-    var quantity: Int?
+    private var name: String
+    private var category: String
+    private var quantity: Int?
+    
+    var wrappedValue: Any{
+        get{ name; category; quantity }
+        set{ name = newValue(); category = newValue(); quantity = newValue() }
+    }
 }
 
 struct ListOfIngr{
@@ -21,7 +27,4 @@ struct ListOfIngr{
         self.IngrList.append(t)
     }
 }
-
-ListOfIngr(name: "Broccoli", category: "Vegetable")
-ListOfIngr(name: "Cucumber", category: "Vegetable")
 
