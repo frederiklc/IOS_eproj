@@ -12,51 +12,46 @@ struct YourIngredients: View {
     @StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        
-        ZStack {
-            HStack {
-                Button(action: {
-                    ViewRoute.pageView = .page1
-                }) {
-                    backButton()
+        NavigationView {
+            ZStack {
+                HStack {
+                    Button(action: {
+                        ViewRoute.pageView = .page1
+                    }) {
+                        backButton()
+                    }
+                }
+                .padding(.leading, -150)
+                .padding(.top, -350)
+                
+                VStack() {
+                    Spacer()
+                        .frame(height: 18.0)
+                    
+                    
+                    Button(action: {
+                        ViewRoute.pageView = .page3
+                    }) {
+                        ButtonStand(ButtText: "Add Ingredient")
+                    }
+                    Button(action: {
+                        ViewRoute.pageView = .page4
+                    }) {
+                        ButtonStand(ButtText: "Possible Recipes")
+                    }
+                    
+                    Spacer()
+                        .frame(height: 10)
+                    
+                    Text("Liste her")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.red)
+                        .padding(.bottom,100)
+                        .padding(.top,100)
                 }
             }
-            .padding(.leading, -150)
-            .padding(.top, -350)
-            
-            VStack() {
-                Text("Markér ingredienser i dit køleskab")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .padding(20)
-                
-                Spacer()
-                    .frame(height: 18.0)
-                
-                
-                Button(action: {
-                    ViewRoute.pageView = .page3
-                }) {
-                    ButtonStand(ButtText: "Add Ingredient")
-                }
-                Button(action: {
-                    ViewRoute.pageView = .page4
-                }) {
-                    ButtonStand(ButtText: "Possible Recipes")
-                }
-                
-                Spacer()
-                    .frame(height: 10)
-                
-                Text("Liste her")
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.red)
-                    .padding(.bottom,100)
-                    .padding(.top,100)
-                
-                
-            }
+            .navigationTitle("Your Ingredients")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
