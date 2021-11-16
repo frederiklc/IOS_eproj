@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IngredientList: View {
+struct Possiblerecipes: View {
     
     @StateObject var ViewRoute: viewRouter
     
@@ -15,9 +15,9 @@ struct IngredientList: View {
         Text("Her skal der være noget Web-hentning")
     }
     
-    struct IngredientList_Previews: PreviewProvider {
+    struct Possiblerecipes_Previews: PreviewProvider {
         static var previews: some View {
-            IngredientList(ViewRoute: viewRouter())
+            Possiblerecipes(ViewRoute: viewRouter())
         }
     }
 }

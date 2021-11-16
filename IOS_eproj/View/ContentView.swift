@@ -22,6 +22,8 @@ struct ContentView: View {
             YourIngredients(ViewRoute: ViewRoute)
         case .page3:
             AddIngredient(ViewRoute: ViewRoute)
+        case .page4:
+            Possiblerecipes(ViewRoute: ViewRoute)
         }
     }
 }
