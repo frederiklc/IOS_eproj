@@ -27,20 +27,19 @@ struct ButtonStand: View {
 
 struct backButton: View {
     var body: some View {
-        Group {
-            HStack {
-                Image(systemName: "chevron.right.circle")
-                    .frame(width: 2.0, height: 2.0)
-                    .rotationEffect(.degrees(180))
-                Text("Retur")
-                    .font(.footnote)
-                    .padding(.leading, 5.0)
-            }
-            .padding(.top, -30.0)
-            .padding(.leading, -130.0)
+        HStack {
+            Image(systemName: "chevron.right.circle")
+                .frame(width: 2.0, height: 2.0)
+                .rotationEffect(.degrees(180))
+                .foregroundColor(.blue)
+            Text("Retur")
+                .font(.footnote)
+                .padding(.leading, 5.0)
         }
     }
 }
+
+
 
 // ********** Amount of views  **********
 
