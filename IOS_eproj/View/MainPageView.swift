@@ -14,18 +14,18 @@ struct MainPageView: View {
     var body: some View {
         ZStack {
             VStack() {
-                Text("Velkommen til NoWaste Recipes")
+                Text("NoWaste Recipes")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                    .padding(20)
+                    //.padding(20)
                 
                 Spacer()
                     .frame(height: 18.0)
                 
                 Image(systemName: "swift")
                     .resizable()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 150, height: 150)
                     .padding()
                 
                 Spacer()
@@ -33,12 +33,14 @@ struct MainPageView: View {
                 
                 Button(action: {
                     ViewRoute.pageView = .page2
-                    
                 }) {
                     NextButton() // <-------
                 }
-                Text("side 1")
-
+                Button(action: {
+                    ViewRoute.pageView = .page4 // AddIngredient
+                }) {
+                    NextButton() // <-------
+                }
             }
         }
     }
