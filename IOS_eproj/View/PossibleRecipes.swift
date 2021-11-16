@@ -12,32 +12,35 @@ struct Possiblerecipes: View {
     @StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        ZStack {
-            HStack {
-                Button(action: {
-                    ViewRoute.pageView = .page1
-                }) {
-                    backButton()
+        NavigationView {
+            ZStack {
+                HStack {
+                    Button(action: {
+                        ViewRoute.pageView = .page1
+                    }) {
+                        backButton()
+                    }
+                }
+                .padding(.leading, -150)
+                .padding(.top, -389)
+                
+                /* NavigationLink(destination: AddIngredient(ViewRoute: ViewRoute)) {
+                    Text("Back")
+                } */
+                
+                VStack {
+
+                    Text("Her skal der være noget Web-hentning")
+                    
+                    Button(action: {
+                        ViewRoute.pageView = .page2
+                    }) {
+                        ButtonStand(ButtText: "www.qwerty.com") // <-------
+                    }
                 }
             }
-            .padding(.leading, -150)
-            .padding(.top, -350)
-            
-            VStack {
-                Button(action: {
-                    ViewRoute.pageView = .page1
-                }) {
-                    backButton()
-                }
-                
-                Text("Her skal der være noget Web-hentning")
-                
-                Button(action: {
-                    ViewRoute.pageView = .page2
-                }) {
-                    ButtonStand(ButtText: "www.qwerty.com") // <-------
-                }
-            }
+            .navigationTitle("Possible recipes")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
