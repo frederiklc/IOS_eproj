@@ -35,6 +35,8 @@ struct PreviousButton: View {
 enum Pages {
     case page1
     case page2
+    enum page3
+    enum page4
     // her tilføjes flere cases, når flere views er oprettet
 }
 
