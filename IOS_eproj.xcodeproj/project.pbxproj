@@ -66,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				F930660127326E6B0034C65A /* IOS_eprojApp.swift */,
-				F9306611273270370034C65A /* Views */,
+				F9306611273270370034C65A /* View */,
 				F93066102732702F0034C65A /* ViewModel */,
 				F930660F273270290034C65A /* Model */,
 				F930660527326E700034C65A /* Assets.xcassets */,
@@ -100,7 +100,7 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		F9306611273270370034C65A /* Views */ = {
+		F9306611273270370034C65A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				F930660327326E6B0034C65A /* ContentView.swift */,
@@ -109,7 +109,7 @@
 				BBAA81702743C78900BC3F1B /* AddIngredient.swift */,
 				F930661627327D160034C65A /* PossibleRecipes.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
