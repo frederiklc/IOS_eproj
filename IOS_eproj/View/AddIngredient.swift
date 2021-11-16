@@ -12,7 +12,7 @@ struct AddIngredient: View {
     @StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        VStack {
+        ZStack {
             HStack {
                 Button(action: {
                     ViewRoute.pageView = .page1
@@ -20,13 +20,18 @@ struct AddIngredient: View {
                     backButton()
                 }
             }
-            .padding(.leading, -140.0)
-            .padding(.top, -30.0)
+            .padding(.leading, -150)
+            .padding(.top, -350)
             
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            
+            VStack {
+                Text("Hej")
+            }
+            
         }
     }
 }
+
 
 struct AddIngredient_Previews: PreviewProvider {
     static var previews: some View {

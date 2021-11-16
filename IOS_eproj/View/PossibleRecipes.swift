@@ -13,6 +13,16 @@ struct Possiblerecipes: View {
     
     var body: some View {
         ZStack {
+            HStack {
+                Button(action: {
+                    ViewRoute.pageView = .page1
+                }) {
+                    backButton()
+                }
+            }
+            .padding(.leading, -150)
+            .padding(.top, -350)
+            
             VStack {
                 Button(action: {
                     ViewRoute.pageView = .page1
@@ -25,7 +35,7 @@ struct Possiblerecipes: View {
                 Button(action: {
                     ViewRoute.pageView = .page2
                 }) {
-                    ButtonStand(ButtText: "www.ratemypoo.com") // <-------
+                    ButtonStand(ButtText: "www.qwerty.com") // <-------
                 }
             }
         }

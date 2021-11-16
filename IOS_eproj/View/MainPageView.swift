@@ -12,44 +12,42 @@ struct MainPageView: View {
     @StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        ZStack {
-            VStack() {
-                Text("iFridge")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                //.padding(20)
-                
-                Spacer()
-                    .frame(height: 18.0)
-                
-                Image(systemName: "swift")
-                    .resizable()
-                    .frame(width: 150, height: 150)
-                    .padding()
-                
-                Spacer()
-                    .frame(height: 10)
-                
-                
-                Button(action: {
-                    ViewRoute.pageView = .page2
-                }) {
-                    ButtonStand(ButtText: "Your ingredients") // <-------
-                }
-                Button(action: {
-                    ViewRoute.pageView = .page3 // AddIngredient
-                }) {
-                    ButtonStand(ButtText: "Add Ingredients") // <-------
-                }
-                Button(action: {
-                    ViewRoute.pageView = .page4
-                }) {
-                    ButtonStand(ButtText: "Possible recipes") // <-------
-                }
+        
+        VStack() {
+            Text("iFridge")
+                .font(.title)
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+            //.padding(20)
+            
+            Spacer()
+                .frame(height: 18.0)
+            
+            Image(systemName: "swift")
+                .resizable()
+                .frame(width: 150, height: 150)
+                .padding()
+            
+            Spacer()
+                .frame(height: 10)
+            
+            Button(action: {
+                ViewRoute.pageView = .page2
+            }) {
+                ButtonStand(ButtText: "Your ingredients") // <-------
             }
-            .padding()
+            Button(action: {
+                ViewRoute.pageView = .page3 // AddIngredient
+            }) {
+                ButtonStand(ButtText: "Add Ingredients") // <-------
+            }
+            Button(action: {
+                ViewRoute.pageView = .page4
+            }) {
+                ButtonStand(ButtText: "Possible recipes") // <-------
+            }
         }
+        .padding()
     }
 }
 

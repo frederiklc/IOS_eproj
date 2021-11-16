@@ -14,17 +14,17 @@ struct YourIngredients: View {
     var body: some View {
         
         ZStack {
-            VStack() {
-                HStack {
-                    Button(action: {
-                        ViewRoute.pageView = .page1
-                    }) {
-                        backButton()
-                    }
+            HStack {
+                Button(action: {
+                    ViewRoute.pageView = .page1
+                }) {
+                    backButton()
                 }
-                .padding(.leading, -140.0)
-                .padding(.top, -30.0)
-                
+            }
+            .padding(.leading, -150)
+            .padding(.top, -350)
+            
+            VStack() {
                 Text("Markér ingredienser i dit køleskab")
                     .font(.title)
                     .fontWeight(.bold)
@@ -55,7 +55,7 @@ struct YourIngredients: View {
                     .padding(.bottom,100)
                     .padding(.top,100)
                 
-
+                
             }
         }
     }
