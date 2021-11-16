@@ -13,10 +13,8 @@ struct AddIngredient: View {
     
     var body: some View {
         NavigationView {
-            Form {
-                Section {
-                    Text("Hello, world!")
-                }
+            VStack {
+                Text("Hello, world!")
             }
             .navigationTitle("Add Ingredients")
             .navigationBarTitleDisplayMode(.inline)
