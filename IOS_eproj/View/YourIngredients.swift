@@ -42,8 +42,6 @@ struct YourIngredients: View {
                 }) {
                     PreviousButton() // <-------
                 }
-                Text("side 2")
-                
             }
         }
     }
