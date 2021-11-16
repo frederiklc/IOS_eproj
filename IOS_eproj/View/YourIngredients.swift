@@ -14,6 +14,7 @@ struct YourIngredients: View {
     var body: some View {
         ZStack {
             VStack() {
+                backButton()
                 Text("Markér ingredienser i dit køleskab")
                     .font(.title)
                     .fontWeight(.bold)

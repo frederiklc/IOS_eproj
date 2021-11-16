@@ -18,7 +18,7 @@ struct MainPageView: View {
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                    //.padding(20)
+                //.padding(20)
                 
                 Spacer()
                     .frame(height: 18.0)
@@ -31,17 +31,24 @@ struct MainPageView: View {
                 Spacer()
                     .frame(height: 10)
                 
+                
                 Button(action: {
                     ViewRoute.pageView = .page2
                 }) {
-                    ButtonStand(ButtText: "My fridge") // <-------
+                    ButtonStand(ButtText: "Your ingredients") // <-------
                 }
                 Button(action: {
-                    ViewRoute.pageView = .page4 // AddIngredient
+                    ViewRoute.pageView = .page3 // AddIngredient
+                }) {
+                    ButtonStand(ButtText: "Add Ingredients") // <-------
+                }
+                Button(action: {
+                    ViewRoute.pageView = .page4
                 }) {
                     ButtonStand(ButtText: "Possible recipes") // <-------
                 }
             }
+            .padding()
         }
     }
 }
