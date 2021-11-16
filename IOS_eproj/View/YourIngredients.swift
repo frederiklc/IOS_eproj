@@ -33,14 +33,14 @@ struct YourIngredients: View {
                     .frame(height: 10)
                 
                 Button(action: {
-                    ViewRoute.pageView = .page1
-                }) {
-                    ButtonStand(ButtText: "Return to Mainpage")
-                }
-                Button(action: {
                     ViewRoute.pageView = .page3
                 }) {
                     ButtonStand(ButtText: "Add Ingredient")
+                }
+                Button(action: {
+                    ViewRoute.pageView = .page4
+                }) {
+                    ButtonStand(ButtText: "Possible Recipes")
                 }
             }
         }
