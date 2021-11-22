@@ -22,7 +22,7 @@ struct MainPageView: View {
                 //.padding(20)
                 
                 Spacer()
-                    .frame(height: 18.0)
+                    
                 
                 Image(systemName: "swift")
                     .resizable()
@@ -30,23 +30,40 @@ struct MainPageView: View {
                     .padding()
                 
                 Spacer()
-                    .frame(height: 10)
+                    .frame(height: 150)
+                
                 
                 NavigationLink(destination: YourIngredients(), label: {
                     Text("Your ingredients")
-                        .foregroundColor(Color.black)
+                        .bold()
+                        .frame(width: 250, height: 50)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
                 })
-                    .padding()
+                Spacer()
+                    .frame(height: 20)
                 NavigationLink(destination: AddIngredient(), label: {
                     Text("Add ingredients")
-                        .foregroundColor(Color.black)
+                        .bold()
+                        .frame(width: 250, height: 50)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
                 })
-                    .padding()
+                Spacer()
+                    .frame(height: 20)
+                
                 NavigationLink(destination: Possiblerecipes(), label: {
                     Text("Possible recipes")
-                        .foregroundColor(Color.black)
+                        .bold()
+                        .frame(width: 250, height: 50)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
                 })
-                    .padding()
+                Spacer()
+                    .frame(height: 20)
                 /*
                  Button(action: {
                  ViewRoute.pageView = .page2
