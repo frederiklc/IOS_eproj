@@ -9,29 +9,31 @@ import SwiftUI
 
 struct AddIngredient: View {
     
-    @StateObject var ViewRoute: viewRouter
+    //@StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Hello, world!")
-            }
-            .navigationTitle("Add Ingredients")
-            .navigationBarTitleDisplayMode(.inline)
+        
+        VStack {
+            /*HStack {
+             Button(action: {
+             ViewRoute.pageView = .page1
+             }) {
+             backButton()
+             }
+             } */
+            
+            Text("Hello, world!")
         }
+        .navigationTitle("Add Ingredients")
+        .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 
-/*
- Button(action: {
- ViewRoute.pageView = .page1
- }) {
- backButton()
- }
- */
 
 struct AddIngredient_Previews: PreviewProvider {
     static var previews: some View {
-        AddIngredient(ViewRoute: viewRouter())
+        AddIngredient()
+        //AddIngredient(ViewRoute: viewRouter())
     }
 }

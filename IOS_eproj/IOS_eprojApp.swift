@@ -14,9 +14,10 @@ struct IOS_eprojApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(ViewRoute: ViewRoute) // contentview's viewRouter will now be able to observe and access the viewRouter's observableObject
+            ContentView()
+            /*ContentView(ViewRoute: ViewRoute) // contentview's viewRouter will now be able to observe and access the viewRouter's observableObject
                 .environment(\.managedObjectContext,
-                              persistenceController.container.viewContext)
+                              persistenceController.container.viewContext) */
         }
     }
 }
