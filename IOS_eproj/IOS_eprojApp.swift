@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct IOS_eprojApp: App {
-    let persistenceController = PersistenceController.shared
-    @StateObject var ViewRoute = viewRouter()
+    //let persistenceController = PersistenceController.shared
+    //@StateObject var ViewRoute = viewRouter()
     
     var body: some Scene {
         WindowGroup {

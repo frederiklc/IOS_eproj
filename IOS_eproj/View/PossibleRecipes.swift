@@ -18,7 +18,9 @@ struct Possiblerecipes: View {
             })
             
             
-            Text("Her skal der være noget Web-hentning")
+            Text("Tapped ingredients should form possible recipes")
+                .fontWeight(.bold)
+                .foregroundColor(Color.red)
         }
         .navigationTitle("Possible recipes")
         .navigationBarTitleDisplayMode(.inline)

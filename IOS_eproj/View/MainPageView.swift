@@ -15,7 +15,7 @@ struct MainPageView: View {
         NavigationView {
             VStack() {
                 
-                Text("iFridge")
+                Text("iFridge Cooking")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)

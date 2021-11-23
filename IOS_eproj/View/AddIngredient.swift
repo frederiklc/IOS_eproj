@@ -22,7 +22,9 @@ struct AddIngredient: View {
              }
              } */
             
-            Text("Hello, world!")
+            Text("Tap and store ingredients here")
+                .fontWeight(.bold)
+                .foregroundColor(Color.red)
         }
         .navigationTitle("Add Ingredients")
         .navigationBarTitleDisplayMode(.inline)

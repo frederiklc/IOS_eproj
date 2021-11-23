@@ -42,7 +42,7 @@ struct YourIngredients: View {
             Spacer()
                 .frame(height: 10)
             
-            Text("Liste her")
+            Text("List for current ingredients here")
                 .fontWeight(.bold)
                 .foregroundColor(Color.red)
                 .padding(.bottom,100)
