@@ -15,7 +15,7 @@ struct MainPageView: View {
         NavigationView {
             VStack() {
                 
-                Text("iFridge Cooking")
+                Text("CookingCoach")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
@@ -23,15 +23,13 @@ struct MainPageView: View {
                 
                 Spacer()
                     
-                
-                Image(systemName: "swift")
+                Image(systemName: "cart")
                     .resizable()
                     .frame(width: 150, height: 150)
                     .padding()
                 
                 Spacer()
                     .frame(height: 150)
-                
                 
                 NavigationLink(destination: YourIngredients(), label: {
                     Text("Your ingredients")
@@ -43,6 +41,7 @@ struct MainPageView: View {
                 })
                 Spacer()
                     .frame(height: 20)
+                
                 NavigationLink(destination: AddIngredient(), label: {
                     Text("Add ingredients")
                         .bold()

@@ -45,7 +45,7 @@ struct ContentView: View {
                         .frame(width: 85, height: 85)
                         .scaleEffect(animate ? 50 : 1) // if animate is true then scale by 50 otherwise 1
                         .animation(Animation.easeIn(duration: 0.7), value: animate) // value depend on effect
-                    //.animation(Animation.easeIn(duration: 1.5))
+                    //.animation(Animation.easeIn(duration: 1.5)) not applicable
                 }
                 .edgesIgnoringSafeArea(.all) // fill out color to full screen
                 .animation(Animation.easeIn(duration: 2), value: ShowMain) // ease MainPageView post launch
