@@ -76,7 +76,6 @@
 				F930660527326E700034C65A /* Assets.xcassets */,
 				BBAA819C274425F700BC3F1B /* Persistance.swift */,
 				F930660727326E700034C65A /* Preview Content */,
-				F9306618273EC1E70034C65A /* CoreDataModel.xcdatamodeld */,
 			);
 			path = IOS_eproj;
 			sourceTree = "<group>";
@@ -94,6 +93,7 @@
 			children = (
 				F9306614273270500034C65A /* ModelData.swift */,
 				BBAA81772743E24A00BC3F1B /* IngredientsModel.swift */,
+				F9306618273EC1E70034C65A /* CoreDataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -48,7 +48,7 @@ struct YourIngredients: View {
                 .padding(.bottom,100)
                 .padding(.top,100)
         }
-        .navigationTitle("Your Ingredients")
+        .navigationTitle("You Ingredients")
         .navigationBarTitleDisplayMode(.inline)
     }
 }

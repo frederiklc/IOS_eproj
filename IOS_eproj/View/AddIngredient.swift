@@ -22,13 +22,16 @@ struct AddIngredient: View {
              }
              } */
             
-            Text("Tap and store ingredients here")
+            Text("Search bar here [     ]")
                 .fontWeight(.bold)
                 .foregroundColor(Color.red)
+            Spacer()
+                .frame(height: 70)
+            Text("Tapped ingredients should be ticked on/off here instead of having Your Ingredients View ")
+            Spacer()
         }
         .navigationTitle("Add Ingredients")
         .navigationBarTitleDisplayMode(.inline)
-        
     }
 }
 

@@ -30,7 +30,7 @@ struct MainPageView: View {
                 
                 Spacer()
                     .frame(height: 150)
-                
+                /*
                 NavigationLink(destination: YourIngredients(), label: {
                     Text("Your ingredients")
                         .bold()
@@ -38,9 +38,7 @@ struct MainPageView: View {
                         .foregroundColor(Color.white)
                         .background(Color.blue)
                         .cornerRadius(10)
-                })
-                Spacer()
-                    .frame(height: 20)
+                })*/
                 
                 NavigationLink(destination: AddIngredient(), label: {
                     Text("Add ingredients")

@@ -14,11 +14,7 @@ struct Possiblerecipes: View {
     var body: some View {
         
         VStack {
-            NavigationLink(destination: MainPageView(), label: {
-            })
-            
-            
-            Text("Tapped ingredients should form possible recipes")
+            Text("Possible recipes")
                 .fontWeight(.bold)
                 .foregroundColor(Color.red)
         }
