@@ -9,55 +9,54 @@ import SwiftUI
 
 struct YourIngredients: View {
     
-    @StateObject var ViewRoute: viewRouter
+    //@StateObject var ViewRoute: viewRouter
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                HStack {
-                    Button(action: {
-                        ViewRoute.pageView = .page1
-                    }) {
-                        backButton()
-                    }
-                }
-                .padding(.leading, -150)
-                .padding(.top, -350)
-                
-                VStack() {
-                    Spacer()
-                        .frame(height: 18.0)
-                    
-                    
-                    Button(action: {
-                        ViewRoute.pageView = .page3
-                    }) {
-                        ButtonStand(ButtText: "Add Ingredient")
-                    }
-                    Button(action: {
-                        ViewRoute.pageView = .page4
-                    }) {
-                        ButtonStand(ButtText: "Possible Recipes")
-                    }
-                    
-                    Spacer()
-                        .frame(height: 10)
-                    
-                    Text("Liste her")
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.red)
-                        .padding(.bottom,100)
-                        .padding(.top,100)
-                }
-            }
-            .navigationTitle("Your Ingredients")
-            .navigationBarTitleDisplayMode(.inline)
+        
+        VStack {
+            /*HStack {
+             Button(action: {
+             ViewRoute.pageView = .page1
+             }) {
+             backButton()
+             }
+             }
+             
+             VStack() {
+             Spacer()
+             .frame(height: 18.0)
+             
+             
+             Button(action: {
+             ViewRoute.pageView = .page3
+             }) {
+             ButtonStand(ButtText: "Add Ingredient")
+             }
+             Button(action: {
+             ViewRoute.pageView = .page4
+             }) {
+             ButtonStand(ButtText: "Possible Recipes")
+             }
+             */
+            
+            Spacer()
+                .frame(height: 10)
+            
+            Text("List for current ingredients here")
+                .fontWeight(.bold)
+                .foregroundColor(Color.red)
+                .padding(.bottom,100)
+                .padding(.top,100)
         }
+        .navigationTitle("You Ingredients")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
+
 struct YourIngredients_Previews: PreviewProvider {
     static var previews: some View {
-        YourIngredients(ViewRoute: viewRouter())
+        YourIngredients()
+        //YourIngredients(ViewRoute: viewRouter())
     }
 }
