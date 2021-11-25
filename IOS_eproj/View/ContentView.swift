@@ -69,6 +69,7 @@ struct ContentView: View {
          AddIngredient(ViewRoute: ViewRoute)
          }*/
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
