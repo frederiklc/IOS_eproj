@@ -20,7 +20,7 @@ struct DetailScreen: View {
                 image.resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: bounds.width - 20)
-                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .clipShape(RoundedRectangle(cornerRadius: 60, style: .continuous))
             } placeholder: {
                 ProgressView()
             }
