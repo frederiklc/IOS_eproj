@@ -11,8 +11,14 @@ struct template {
     
     struct URLs {
         
-        static let categoryURL = URL(string: "https://www.themealdb.com/api/json/v1/1/categories.php")! // the force-unwrapper is risky. But in this case we know that the url is correct
+        static let categoryURL = URL(string: "https://recipesapi.herokuapp.com/api/v2/categories")! // the force-unwrapper is risky. But in this case we know that the url is correct
         
+        static func recipeCatName(_ name: String) -> URL {
+            return URL(string: "https://recipesapi.herokuapp.com/api/v2/recipes?q=\(name)&page=1")!
+        }
+        static func recipeById(_ id: String) -> URL {
+            return URL(string: "https://recipesapi.herokuapp.com/api/v2/recipes/\(id)")!
+        }
     }
     
 }

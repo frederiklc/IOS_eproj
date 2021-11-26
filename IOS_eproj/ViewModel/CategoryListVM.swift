@@ -42,11 +42,11 @@ struct categoryViewModel: Identifiable { // identifiable so we can loop through 
         self.Category = Category
     }
     var title: String {
-        Category.strCategory
+        Category.title
     }
     
     var imageUrl: URL? {
-        URL(string: Category.strCategoryThumb)
+        URL(string: Category.imageUrl)
     }
     
     

@@ -12,15 +12,15 @@ struct CategoryList: View {
     @StateObject var model: categoryListVM = categoryListVM()
     
     var body: some View {
-        NavigationView {
+
             // display our category list view
             CategoryListView(categories: model.Categories)
                 .task {
                     await model.populateCategories()
                 }
                 .navigationTitle("Recipes")
-                //.navigationBarTitleDisplayMode(.inline)
-        }
+                .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 
