@@ -11,6 +11,9 @@ import SwiftUI
 
 struct ContentView: View {
     
+    let persistenceController = PersistenceController.shared
+    @Environment(\.scenePhase) var scenePhase
+    
     // defining lowest grayscale (black: RGB = 0)
     let color: UIColor = UIColor(red: 0,
                                  green: 0,
