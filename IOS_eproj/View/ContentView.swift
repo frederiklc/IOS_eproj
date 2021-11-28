@@ -15,9 +15,9 @@ struct ContentView: View {
     @Environment(\.scenePhase) var scenePhase
     
     // defining lowest grayscale (black: RGB = 0)
-    let color: UIColor = UIColor(red: 0,
-                                 green: 0,
-                                 blue: 0,
+    let color: UIColor = UIColor(red: 29/255.0,
+                                 green: 161/255.0,
+                                 blue: 242/255.0,
                                  alpha: 1)
     
     @State var animate = false // current state for this view = false until toggled.
@@ -42,17 +42,17 @@ struct ContentView: View {
                 // zoom-animation
                 ZStack {
                     Color(color)
-                    Image("IntroLove")
+                    Image("ShoppingCart")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 85, height: 85)
-                        .scaleEffect(animate ? 50 : 1) // if animate is true then scale by 50 otherwise 1
+                        .scaleEffect(animate ? 60 : 1) // if animate is true then scale by 50 otherwise 1
                         .animation(Animation.easeIn(duration: 0.7), value: animate) // value depend on effect
                     //.animation(Animation.easeIn(duration: 1.5)) not applicable
                 }
                 .edgesIgnoringSafeArea(.all) // fill out color to full screen
-                .animation(Animation.easeIn(duration: 2), value: ShowMain) // ease MainPageView post launch
-                .opacity(ShowMain ? 1 : 0) // ease in the transition of mainPageView colors
+                .animation(Animation.easeOut(duration: 2), value: ShowMain) // ease MainPageView post launch
+                .opacity(ShowMain ? 2 : 0) // ease in the transition of mainPageView colors
             }
         }
         .onAppear {
@@ -72,6 +72,7 @@ struct ContentView: View {
          AddIngredient(ViewRoute: ViewRoute)
          }*/
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

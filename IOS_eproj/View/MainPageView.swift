@@ -51,7 +51,7 @@ struct MainPageView: View {
                 Spacer()
                     .frame(height: 20)
                 
-                NavigationLink(destination: Possiblerecipes(), label: {
+                NavigationLink(destination: CategoryList(), label: {
                     Text("Possible recipes")
                         .bold()
                         .frame(width: 250, height: 50)
