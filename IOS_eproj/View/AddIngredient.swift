@@ -33,7 +33,8 @@ struct AddIngredient: View {
             
             List{
                 ForEach(ingredientslist) { Ingredients in
-                    Text(Ingredients.name ?? "")
+                    var StringOfIngr: String = "\(Ingredients.quantity)x \(Ingredients.name ?? "")"
+                    Text(StringOfIngr)
                 }.onDelete(perform: deleteIngredient)
             }
             .navigationTitle("Add your Ingredients")
