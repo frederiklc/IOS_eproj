@@ -9,15 +9,16 @@ import SwiftUI
 
 @main
 struct IOS_eprojApp: App {
-    //let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController.shared
+    //@StateObject var addIngredientViewModel: AddIngredientViewModel = AddIngredientViewModel()
     //@StateObject var ViewRoute = viewRouter()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
-            /*ContentView(ViewRoute: ViewRoute) // contentview's viewRouter will now be able to observe and access the viewRouter's observableObject
-                .environment(\.managedObjectContext,
-                              persistenceController.container.viewContext) */
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            /*ContentView(ViewRoute: ViewRoute) // contentview's viewRouter will now be able to observe and access the viewRouter's observableObject*/
+
         }
     }
 }

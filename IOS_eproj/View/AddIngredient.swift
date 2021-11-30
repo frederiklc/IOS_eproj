@@ -6,39 +6,62 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct AddIngredient: View {
-    
     //@StateObject var ViewRoute: viewRouter
+    @Environment(\.managedObjectContext) private var viewContext
+    @State private var IngredientName: String = ""
+    @State private var IngredientQuantity: String = ""
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Ingredients.name, ascending: true)],
+        animation: .default)
+    private var ingredientslist: FetchedResults<Ingredients>
     
     var body: some View {
-        
         VStack {
-            /*HStack {
-             Button(action: {
-             ViewRoute.pageView = .page1
-             }) {
-             backButton()
-             }
-             } */
+                TextField("Type Ingredient", text: $IngredientName)
+                    .textFieldStyle(.roundedBorder)
+                TextField("Type quantity", text: $IngredientQuantity)
+                    .textFieldStyle(.roundedBorder)
+                    .keyboardType(.decimalPad)
+                Button(action: addIngredient) {
+                    Label("", systemImage: "plus")
+                }
+            }.padding()
             
-            Text("Search bar here [     ]")
-                .fontWeight(.bold)
-                .foregroundColor(Color.red)
-            Spacer()
-                .frame(height: 70)
-            Text("Tapped ingredients should be ticked on/off here instead of having Your Ingredients View ")
-            Spacer()
+            List{
+                ForEach(ingredientslist) { Ingredients in
+                    Text(Ingredients.name ?? "")
+                }.onDelete(perform: deleteIngredient)
+            }
+            .navigationTitle("Add your Ingredients")
         }
-        .navigationTitle("Add Ingredients")
-        .navigationBarTitleDisplayMode(.inline)
+    
+    private func deleteIngredient(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { ingredientslist[$0] }.forEach(viewContext.delete)
+            PersistenceController.shared.saveContext()
+        }
+    }
+    
+    private func addIngredient() {
+        withAnimation {
+            let newIngredient = Ingredients(context: viewContext)
+            newIngredient.name = IngredientName
+            newIngredient.quantity = Int64(IngredientQuantity) ?? 0
+            PersistenceController.shared.saveContext()
+        }
     }
 }
-
 
 struct AddIngredient_Previews: PreviewProvider {
     static var previews: some View {
-        AddIngredient()
+        AddIngredient().environment(\.managedObjectContext,
+                                     PersistenceController.preview.container.viewContext)
         //AddIngredient(ViewRoute: viewRouter())
     }
 }
+
+

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB35F1512756696A00936376 /* AddIngredientVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB35F1502756696A00936376 /* AddIngredientVM.swift */; };
 		BBAA81712743C78900BC3F1B /* AddIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA81702743C78900BC3F1B /* AddIngredient.swift */; };
 		BBAA81782743E24A00BC3F1B /* IngredientsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA81772743E24A00BC3F1B /* IngredientsModel.swift */; };
 		BBAA819D274425F700BC3F1B /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAA819C274425F700BC3F1B /* Persistance.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB35F1502756696A00936376 /* AddIngredientVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientVM.swift; sourceTree = "<group>"; };
 		BBAA81702743C78900BC3F1B /* AddIngredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredient.swift; sourceTree = "<group>"; };
 		BBAA81772743E24A00BC3F1B /* IngredientsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsModel.swift; sourceTree = "<group>"; };
 		BBAA819C274425F700BC3F1B /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				F955FF7527500E3C0095F6EB /* CategoryListVM.swift */,
 				F955FF822750C9370095F6EB /* RecipeListVM.swift */,
 				F955FF8E2750F4CA0095F6EB /* RecipeDetailVM.swift */,
+				BB35F1502756696A00936376 /* AddIngredientVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				F955FF7B2750153E0095F6EB /* CategoryList.swift in Sources */,
 				BBAA81712743C78900BC3F1B /* AddIngredient.swift in Sources */,
 				F955FF7827500EE80095F6EB /* Template.swift in Sources */,
+				BB35F1512756696A00936376 /* AddIngredientVM.swift in Sources */,
 				F955FF72275009DC0095F6EB /* Webcall.swift in Sources */,
 				F955FF892750D11F0095F6EB /* RecipeListView.swift in Sources */,
 				F955FF8B2750D3E10095F6EB /* RecipeCellView.swift in Sources */,
@@ -389,6 +393,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_eproj/Preview Content\"";
+				DEVELOPMENT_TEAM = HTMRWWQDT8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -417,6 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_eproj/Preview Content\"";
+				DEVELOPMENT_TEAM = HTMRWWQDT8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -1,16 +1,28 @@
-//
 //  Persistence.swift
 //  Nytprojekt
 //
 //  Created by Kristian Andersen on 16/11/2021.
 //
-
 import CoreData
 
 struct PersistenceController {
-    static let shared = PersistenceController()
-
     let container: NSPersistentContainer
+    
+    static let shared = PersistenceController()
+    
+    var viewContext: NSManagedObjectContext {
+        return container.viewContext
+    }
+    
+    static var preview: PersistenceController {
+        let result = PersistenceController(inMemory: true)
+        let viewContext = result.container.viewContext
+        
+        let newIngredient = Ingredients(context: viewContext)
+        
+        shared.saveContext()
+        return result
+    }
 
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "CoreDataModel")
@@ -19,13 +31,12 @@ struct PersistenceController {
         }
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-              
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
     }
     
-    func save(completion: @escaping (Error?) -> () = {_ in}) {
+    func saveContext(completion: @escaping (Error?) -> () = {_ in}) {
         let context = container.viewContext
         if context.hasChanges {
             do {
@@ -39,7 +50,7 @@ struct PersistenceController {
     func delete(_ object: NSManagedObject, completion: @escaping (Error?) -> () = {_ in}){
         let context = container.viewContext
         context.delete(object)
-        save(completion: completion)
+        saveContext(completion: completion)
     }
 }
 

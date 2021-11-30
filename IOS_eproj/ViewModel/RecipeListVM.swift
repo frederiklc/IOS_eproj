@@ -19,7 +19,7 @@ class recipeListVM: ObservableObject {
     // the function which returns us the recipes
     func mergeRecipeByCategory(name: String) async {
         
-        do { // async function needs try await as we're requesting content from the url
+        do { // async function needs try a$wait as we're requesting content from the url
             let RecipeResponse = try await webCall().get(url: template.URLs.recipeCatName(name)) { data in
                 return try? JSONDecoder().decode(recipeResponse.self, from: data)
             }
