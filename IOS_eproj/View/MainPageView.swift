@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainPageView: View {
     
-    //@StateObject var ViewRoute: viewRouter
+    @State var resize = false
     
     var body: some View {
         NavigationView {
@@ -30,55 +30,46 @@ struct MainPageView: View {
                 
                 Spacer()
                     .frame(height: 150)
-                /*
-                NavigationLink(destination: YourIngredients(), label: {
-                    Text("Your ingredients")
-                        .bold()
-                        .frame(width: 250, height: 50)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                })*/
                 
-                NavigationLink(destination: AddIngredient(), label: {
-                    Text("Add ingredients")
-                        .bold()
-                        .frame(width: 250, height: 50)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                })
+                Button(action: {})
+                {
+                     NavigationLink(destination: AddIngredient()) {
+                         ButtonStand(ButtText: "Add ingredients")
+                     }
+                 }                
+                
                 Spacer()
                     .frame(height: 20)
                 
-                NavigationLink(destination: CategoryList(), label: {
-                    Text("Possible recipes")
-                        .bold()
-                        .frame(width: 250, height: 50)
-                        .foregroundColor(Color.white)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                })
+                Button(action: {})
+                {
+                     NavigationLink(destination: CategoryList()) {
+                         ButtonStand(ButtText: "Possible Recipes")
+                     }
+                 }
+                
                 Spacer()
                     .frame(height: 20)
-                /*
-                 Button(action: {
-                 ViewRoute.pageView = .page2
-                 }) {
-                 ButtonStand(ButtText: "Your ingredients") // <-------
-                 }
-                 Button(action: {
-                 ViewRoute.pageView = .page3 // AddIngredient
-                 }) {
-                 ButtonStand(ButtText: "Add Ingredients") // <-------
-                 }
-                 Button(action: {
-                 ViewRoute.pageView = .page4
-                 }) {
-                 ButtonStand(ButtText: "Possible recipes") // <-------
-                 }
-                 }
-                 .padding()
+                
+                  /*
+                   
+                   NavigationLink(destination: AddIngredient(), label: {
+                       Text("Add ingredients")
+                           .bold()
+                           .frame(width: 250, height: 50)
+                           .foregroundColor(Color.white)
+                           .background(Color.blue)
+                           .cornerRadius(10)
+                   })
+                   
+                   NavigationLink(destination: CategoryList(), label: {
+                       Text("Possible recipes")
+                           .bold()
+                           .frame(width: 250, height: 50)
+                           .foregroundColor(Color.white)
+                           .background(Color.blue)
+                           .cornerRadius(10)
+                   })
                  */
             }
         }

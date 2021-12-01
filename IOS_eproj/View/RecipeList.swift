@@ -21,6 +21,41 @@ struct RecipeList: View {
     }
 }
 
+// displays all the recipes
+struct RecipeListView: View {
+    
+    // passing in all the recipes from recipe view model
+    let recipes: [RecipeViewModel]
+    
+    var body: some View {
+        List(recipes, id: \.id) { recipe in
+            NavigationLink(destination: DetailScreen(recipeId: recipe.id).navigationTitle(recipe.title)) {
+                RecipeCellView(recipe: recipe)
+            }
+        }
+    }
+}
+
+struct RecipeCellView: View {
+    
+    // the recipe constant takes in a recipe cell from the view model and displays them
+    let recipe: RecipeViewModel
+    
+    var body: some View {
+        HStack {
+            AsyncImage(url: recipe.imageUrl) { image in // Async = lazy load
+                image.resizable()
+                    .frame(maxWidth: 100, maxHeight: 100)
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+            } placeholder: {
+                ProgressView()
+            }
+            Text(recipe.title)
+        }
+    }
+}
+
 /*struct RecipeList_Previews: PreviewProvider {
     static var previews: some View {
         
