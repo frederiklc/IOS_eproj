@@ -13,6 +13,7 @@ struct AddIngredient: View {
     @Environment(\.managedObjectContext) private var viewContext
     @State private var IngredientName: String = ""
     @State private var IngredientQuantity: String = ""
+    @State private var searchIngredient = ""
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Ingredients.name, ascending: true)],
@@ -21,39 +22,35 @@ struct AddIngredient: View {
     
     var body: some View {
         VStack {
-                TextField("Type Ingredient", text: $IngredientName)
-                    .textFieldStyle(.roundedBorder)
-                TextField("Type quantity", text: $IngredientQuantity)
-                    .textFieldStyle(.roundedBorder)
-                    .keyboardType(.decimalPad)
-                Button(action: addIngredient) {
-                    Label("", systemImage: "plus")
-                }
-            }.padding()
-           
-            List{
-                ForEach(ingredientslist) { Ingredients in
-                    let StringOfIngr: String = "\(Ingredients.quantity)x \(Ingredients.name ?? "")"
-                    Text(StringOfIngr)
-                }.onDelete(perform: deleteIngredient)
+            TextField("Type Ingredient", text: $IngredientName)
+                .textFieldStyle(.roundedBorder)
+            TextField("Type quantity", text: $IngredientQuantity)
+                .textFieldStyle(.roundedBorder)
+            Button(action: addIngredient) {
+                Label("", systemImage: "plus")
             }
-            .navigationTitle("Add your Ingredients")
+        }.padding()
+            .searchable(text: $searchIngredient)
+        
+        List{
+            ForEach(ingredientslist) { Ingredients in
+                let StringOfIngr: String = "\(Ingredients.quantity)x \(Ingredients.name ?? "")"
+                Text(StringOfIngr)
+            }.onDelete(perform: deleteIngredient)
         }
-    
-    private func deleteIngredient(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { ingredientslist[$0] }.forEach(viewContext.delete)
-            PersistenceController.shared.saveContext()
-        }
+        .navigationTitle("Add your Ingredients")
     }
     
-    private func addIngredient() {
-        withAnimation {
+    func deleteIngredient(offsets: IndexSet) {
+            offsets.map { ingredientslist[$0] }.forEach(viewContext.delete)
+            PersistenceController.shared.saveContext()
+    }
+    
+    func addIngredient() {
             let newIngredient = Ingredients(context: viewContext)
             newIngredient.name = IngredientName
             newIngredient.quantity = Int64(IngredientQuantity) ?? 0
             PersistenceController.shared.saveContext()
-        }
     }
 }
 
@@ -66,3 +63,24 @@ struct AddIngredient_Previews: PreviewProvider {
 }
 
 
+/* The code for + and - (without delete functioning)
+ .swipeActions(edge: .leading){
+     Button{
+         Ingredients.quantity = Ingredients.quantity-1
+     } label: {
+         Label("Subtract 1", systemImage: "minus.circle")
+     }.tint(.red)
+     Button{
+         Ingredients.quantity = Ingredients.quantity+1
+     } label: {
+         Label("Add 1", systemImage: "plus.circle")
+     }.tint(.green)
+ }
+ .swipeActions(allowsFullSwipe: false){
+     Button {
+         
+     } label: {
+         Label("Delete", systemImage: "trash.slash")
+     }.tint(.red)
+ }
+ */
