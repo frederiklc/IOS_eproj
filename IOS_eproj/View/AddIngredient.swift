@@ -30,10 +30,10 @@ struct AddIngredient: View {
                     Label("", systemImage: "plus")
                 }
             }.padding()
-            
+           
             List{
                 ForEach(ingredientslist) { Ingredients in
-                    var StringOfIngr: String = "\(Ingredients.quantity)x \(Ingredients.name ?? "")"
+                    let StringOfIngr: String = "\(Ingredients.quantity)x \(Ingredients.name ?? "")"
                     Text(StringOfIngr)
                 }.onDelete(perform: deleteIngredient)
             }
