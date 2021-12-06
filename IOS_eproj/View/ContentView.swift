@@ -42,11 +42,11 @@ struct ContentView: View {
                 // zoom-animation
                 ZStack {
                     Color(color)
-                    Image("ShoppingCart")
+                    Image("fridgeOpen")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 85, height: 85)
-                        .scaleEffect(animate ? 60 : 1) // if animate is true then scale by 50 otherwise 1
+                        .scaleEffect(animate ? 60 : 1) // if animate is true then scale by 60 otherwise 1
                         .animation(Animation.easeIn(duration: 0.7), value: animate) // value depend on effect
                 }
                 .edgesIgnoringSafeArea(.all) // fill out color to full screen
@@ -62,14 +62,6 @@ struct ContentView: View {
                 ShowMain.toggle()
             }
         }
-        /* switch ViewRoute.pageView {
-         case .page1:
-         MainPageView(ViewRoute: ViewRoute)
-         case .page2:
-         YourIngredients(ViewRoute: ViewRoute)
-         case .page3:
-         AddIngredient(ViewRoute: ViewRoute)
-         }*/
     }
     
 }
