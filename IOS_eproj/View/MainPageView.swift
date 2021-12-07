@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MainPageView: View {
     
-    @State var resize = false
+    //@State var resize = false
     
     var body: some View {
         NavigationView {
             VStack() {
                 
-                Text("CookingCoach")
+                Text("FOODSTER")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
@@ -23,7 +23,7 @@ struct MainPageView: View {
                 
                 Spacer()
                     
-                Image(systemName: "cart")
+                Image("fridgeOpen")
                     .resizable()
                     .frame(width: 150, height: 150)
                     .padding()
@@ -36,7 +36,8 @@ struct MainPageView: View {
                      NavigationLink(destination: AddIngredient()) {
                          ButtonStand(ButtText: "Add ingredients")
                      }
-                 }                
+                }
+                .buttonStyle(ResizeButt())
                 
                 Spacer()
                     .frame(height: 20)
@@ -47,6 +48,7 @@ struct MainPageView: View {
                          ButtonStand(ButtText: "Possible Recipes")
                      }
                  }
+                .buttonStyle(ResizeButt())
                 
                 Spacer()
                     .frame(height: 20)
@@ -72,6 +74,7 @@ struct MainPageView: View {
                    })
                  */
             }
+            .padding(.all)
         }
     }
 }
