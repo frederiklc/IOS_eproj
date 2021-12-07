@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct CategoryListView: View {
     // from the categorylist view there's no way to go to a different url. We then implement a navigationlink to always go a specific destination
     let categories: [categoryViewModel]
@@ -19,3 +19,4 @@ struct CategoryListView: View {
         }.listStyle(.plain)
     }
 }
+ */

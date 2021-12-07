@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct CategoryCellView: View {
     
     let recipeCategory: categoryViewModel
@@ -25,3 +25,4 @@ struct CategoryCellView: View {
         }
     }
 }
+ */

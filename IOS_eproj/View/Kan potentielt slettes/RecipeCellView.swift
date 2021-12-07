@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct RecipeCellView: View {
     
     // the recipe constant takes in a recipe cell from the view model and displays them
@@ -26,3 +26,4 @@ struct RecipeCellView: View {
         }
     }
 }
+ */

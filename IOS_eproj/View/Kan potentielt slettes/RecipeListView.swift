@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+
+/*
 // displays all the recipes
 struct RecipeListView: View {
     
@@ -20,3 +22,4 @@ struct RecipeListView: View {
         }
     }
 }
+ */

@@ -4,14 +4,13 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController title="View" id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,10 +21,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShoppingCart" translatesAutoresizingMaskIntoConstraints="NO" id="R1T-DL-GrM">
-                                <rect key="frame" x="164.5" y="405.5" width="85" height="85"/>
-                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fridgeClosed" translatesAutoresizingMaskIntoConstraints="NO" id="R1T-DL-GrM">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="SGv-Ky-hld"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="VLy-Tv-Dbm"/>
                                     <constraint firstAttribute="width" constant="85" id="eT7-Jk-syx"/>
                                     <constraint firstAttribute="height" constant="85" id="xaS-RU-m94"/>
                                 </constraints>
@@ -33,7 +33,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" systemColor="tintColor"/>
+                        <color key="backgroundColor" red="1" green="0.034750782637273714" blue="0.12055709735065902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
                             <constraint firstItem="R1T-DL-GrM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6Vk-A7-YFG"/>
@@ -51,12 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ShoppingCart" width="490" height="462"/>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="fridgeClosed" width="52" height="85"/>
     </resources>
 </document>

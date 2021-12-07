@@ -12,11 +12,11 @@ struct ButtonStand: View {
     var ButtText: String
     var body: some View {
         Text("\(ButtText)")
-            .frame(width: 200.0, height: 20.0)
-            .foregroundColor(.white)
-            .padding()
+            .bold()
+            .frame(width: 250, height: 50)
+            .foregroundColor(Color.white)
             .background(Color.blue)
-            .cornerRadius(8)
+            .cornerRadius(10)
     }
     init(ButtText: String) {
         self.ButtText = ButtText
@@ -40,6 +40,14 @@ struct backButton: View {
 }
 
 
+/*
+Image("ShoppingCart")
+    .resizable()
+    .aspectRatio(contentMode: .fit)
+    .frame(width: 85, height: 85)
+    .scaleEffect(animate ? 60 : 1) // if animate is true then scale by 50 otherwise 1
+    .animation(Animation.easeIn(duration: 0.7), value: animate) // value depend on effect
+*/
 
 // ********** Amount of views  **********
 
