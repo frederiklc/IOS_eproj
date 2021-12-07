@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class AddIngredientViewModel: ObservableObject {
+/*class AddIngredientViewModel: ObservableObject {
     
     @Published var IngredientName: String = ""
     @Published var IngredientQuantity: String = ""
@@ -32,4 +32,4 @@ class AddIngredientViewModel: ObservableObject {
             newIngredient.quantity = Int64(IngredientQuantity) ?? 0
             PersistenceController.shared.saveContext()
     }
-}
+}*/

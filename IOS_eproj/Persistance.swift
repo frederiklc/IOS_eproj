@@ -17,9 +17,7 @@ struct PersistenceController {
     static var preview: PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        
-        let newIngredient = Ingredients(context: viewContext)
-        
+        _ = Ingredients(context: viewContext)
         shared.saveContext()
         return result
     }
