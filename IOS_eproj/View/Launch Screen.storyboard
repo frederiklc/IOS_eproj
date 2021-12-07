@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View-->
+        <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController title="View" id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,27 +21,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fridgeClosed" translatesAutoresizingMaskIntoConstraints="NO" id="R1T-DL-GrM">
-                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fridgeClosed" translatesAutoresizingMaskIntoConstraints="NO" id="am2-Hl-QNH">
+                                <rect key="frame" x="164.5" y="405.5" width="85" height="85"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="SGv-Ky-hld"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="VLy-Tv-Dbm"/>
-                                    <constraint firstAttribute="width" constant="85" id="eT7-Jk-syx"/>
-                                    <constraint firstAttribute="height" constant="85" id="xaS-RU-m94"/>
+                                    <constraint firstAttribute="height" constant="85" id="8WL-0G-uRq"/>
+                                    <constraint firstAttribute="width" constant="85" id="hFq-1i-Z8T"/>
                                 </constraints>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" red="1" green="0.034750782637273714" blue="0.12055709735065902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.63137254901960782" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="am2-Hl-QNH" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2FR-dg-aZ6"/>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
-                            <constraint firstItem="R1T-DL-GrM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6Vk-A7-YFG"/>
-                            <constraint firstItem="R1T-DL-GrM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QU5-fI-wuu"/>
+                            <constraint firstItem="am2-Hl-QNH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CRh-PY-WG6"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" symbolic="YES" id="SfN-ll-jLj"/>
                             <constraint firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="Y44-ml-fuU"/>
-                            <constraint firstItem="R1T-DL-GrM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="fZZ-fp-XQN"/>
-                            <constraint firstItem="R1T-DL-GrM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vKH-yc-usn"/>
                         </constraints>
                     </view>
                 </viewController>

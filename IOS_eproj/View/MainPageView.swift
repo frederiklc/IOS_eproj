@@ -9,24 +9,28 @@ import SwiftUI
 
 struct MainPageView: View {
     
-    @State var resize = false
+    //@State var resize = false
     
     var body: some View {
         NavigationView {
             VStack() {
                 
-                Text("CookingCoach")
-                    .font(.title)
-                    .fontWeight(.bold)
+                Text("FOODSTER")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color("bgColor"))
                     .multilineTextAlignment(.center)
                 //.padding(20)
                 
                 Spacer()
+                    .frame(height: 100)
                     
-                Image(systemName: "cart")
+                Image("fridgeOpen")
                     .resizable()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 200, height: 200)
                     .padding()
+                    .clipShape(Rectangle())
+                    .shadow(color: .black, radius: 8, x: 8, y: 8)
                 
                 Spacer()
                     .frame(height: 150)
@@ -36,7 +40,9 @@ struct MainPageView: View {
                      NavigationLink(destination: AddIngredient()) {
                          ButtonStand(ButtText: "Add ingredients")
                      }
-                 }                
+                }
+                .buttonStyle(ResizeButt())
+                .shadow(color: .gray, radius: 8, x: 8, y: 8)
                 
                 Spacer()
                     .frame(height: 20)
@@ -47,6 +53,8 @@ struct MainPageView: View {
                          ButtonStand(ButtText: "Possible Recipes")
                      }
                  }
+                .buttonStyle(ResizeButt())
+                .shadow(color: .gray, radius: 8, x: 8, y: 8)
                 
                 Spacer()
                     .frame(height: 20)
@@ -72,6 +80,7 @@ struct MainPageView: View {
                    })
                  */
             }
+            .padding(.all)
         }
     }
 }

@@ -13,13 +13,28 @@ struct ButtonStand: View {
     var body: some View {
         Text("\(ButtText)")
             .bold()
-            .frame(width: 250, height: 50)
+            .frame(width: 250, height: 20)
             .foregroundColor(Color.white)
-            .background(Color.blue)
-            .cornerRadius(10)
+            //.cornerRadius(10)
     }
     init(ButtText: String) {
         self.ButtText = ButtText
+    }
+}
+
+struct ResizeButt: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color.blue)
+                    .shadow(color: .green, radius: 10, x: 10, y: 10)
+            )
+            .foregroundColor(.white)
+            .clipShape(Capsule())
+            .scaleEffect(configuration.isPressed ? 1.2 : 1)
+            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
     }
 }
 

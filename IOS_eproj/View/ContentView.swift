@@ -55,7 +55,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
                 animate.toggle() // toggle animate state asap + 0.3 going from false to true on main (UI)
             }
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
@@ -66,10 +66,11 @@ struct ContentView: View {
     
 }
 
+/*
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainPageView()
         /*ContentView(ViewRoute: viewRouter()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext) */
     }
-}
+} */
 
