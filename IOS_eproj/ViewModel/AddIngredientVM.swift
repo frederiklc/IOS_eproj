@@ -6,29 +6,30 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
 
-/*class AddIngredientViewModel: ObservableObject {
-    @Environment(\.managedObjectContext) private var viewContext
+class AddIngredientViewModel: ObservableObject {
     
-    @Published var IngredientsName: String = ""
+    @Published var IngredientName: String = ""
     @Published var IngredientQuantity: String = ""
     
-    private func deleteIngredient(offsets: IndexSet) {
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Ingredients.name, ascending: true)],
+        animation: .default)
+    var ingredientslist: FetchedResults<Ingredients>
+    
+    func deleteIngredient(offsets: IndexSet) {
         withAnimation {
             offsets.map { ingredientslist[$0] }.forEach(viewContext.delete)
             PersistenceController.shared.saveContext()
         }
     }
-    private func addIngredient() {
-        withAnimation {
+    func addIngredient() {
             let newIngredient = Ingredients(context: viewContext)
             newIngredient.name = IngredientName
-            newIngredient.quantity = IngredientQuantity
+            newIngredient.quantity = Int64(IngredientQuantity) ?? 0
             PersistenceController.shared.saveContext()
-        }
-        
     }
-    
-}*/
+}
