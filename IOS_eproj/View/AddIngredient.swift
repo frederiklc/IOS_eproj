@@ -38,6 +38,7 @@ struct AddIngredient: View {
             }.onDelete(perform: deleteIngredient)
         }
         .navigationTitle("Add your Ingredients")
+
     }
     func deleteIngredient(offsets: IndexSet) {
         withAnimation {
