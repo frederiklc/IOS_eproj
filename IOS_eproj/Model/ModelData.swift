@@ -13,7 +13,7 @@ struct ButtonStand: View {
     var body: some View {
         Text("\(ButtText)")
             .bold()
-            //.frame(width: 250, height: 50)
+            .frame(width: 250, height: 20)
             .foregroundColor(Color.white)
             //.cornerRadius(10)
     }
