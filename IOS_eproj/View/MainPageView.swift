@@ -16,17 +16,21 @@ struct MainPageView: View {
             VStack() {
                 
                 Text("FOODSTER")
-                    .font(.title)
-                    .fontWeight(.bold)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color("bgColor"))
                     .multilineTextAlignment(.center)
                 //.padding(20)
                 
                 Spacer()
+                    .frame(height: 100)
                     
                 Image("fridgeOpen")
                     .resizable()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 200, height: 200)
                     .padding()
+                    .clipShape(Rectangle())
+                    .shadow(color: .black, radius: 8, x: 8, y: 8)
                 
                 Spacer()
                     .frame(height: 150)
@@ -38,6 +42,7 @@ struct MainPageView: View {
                      }
                 }
                 .buttonStyle(ResizeButt())
+                .shadow(color: .gray, radius: 8, x: 8, y: 8)
                 
                 Spacer()
                     .frame(height: 20)
@@ -49,6 +54,7 @@ struct MainPageView: View {
                      }
                  }
                 .buttonStyle(ResizeButt())
+                .shadow(color: .gray, radius: 8, x: 8, y: 8)
                 
                 Spacer()
                     .frame(height: 20)
