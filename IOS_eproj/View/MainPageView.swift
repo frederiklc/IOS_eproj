@@ -9,8 +9,6 @@ import SwiftUI
 
 struct MainPageView: View {
     
-    //@State var resize = false
-    
     var body: some View {
         NavigationView {
             VStack() {
