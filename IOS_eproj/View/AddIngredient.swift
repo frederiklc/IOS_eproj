@@ -42,6 +42,8 @@ struct AddIngredient: View {
 
     }
     func deleteIngredient(offsets: IndexSet) {
+        // Ingredients.quantity.remove(atOffsets: index)?
+        // Ingredients.name.remove(atOffsets: index)?
         withAnimation {
             offsets.map { ingredientslist[$0] }.forEach(viewContext.delete)
             PersistenceController.shared.saveContext()

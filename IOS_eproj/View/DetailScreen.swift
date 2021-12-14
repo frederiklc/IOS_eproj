@@ -12,7 +12,7 @@ struct DetailScreen: View {
     let recipeId: String
     let bounds = UIScreen.main.bounds
 
-    @StateObject private var recipeDetailVM = RecipeDetailVM()
+    @StateObject private var recipeDetailVM = RecipeDetailVM() // class RecipeDetailVM can update the view by image, title and description
     
     var body: some View {
         VStack(alignment: .leading) {
