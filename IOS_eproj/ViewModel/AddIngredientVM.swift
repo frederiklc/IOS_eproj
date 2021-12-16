@@ -5,8 +5,8 @@
 //  Created by Kristian Andersen on 30/11/2021.
 //
 
-import Foundation
-import SwiftUI
+//import Foundation
+//import SwiftUI
 
 /*class AddIngredientViewModel: ObservableObject {
     

@@ -16,7 +16,7 @@ struct categoryResponse: Decodable {
 
 struct RecipeCategory: Decodable {
     // within the API we identify that name and title of the recipes are necessary to decode for our webcall-model
-    let title: String // "chicken"
-    let imageUrl: String // imageurl
+    let title: String
+    let imageUrl: String
     
 }

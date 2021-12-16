@@ -15,10 +15,7 @@ struct recipeResponse: Decodable {
 }
 
 struct Recipe: Decodable {
-    
     let id: String 
-    let title: String // chicken
-    let imageUrl: String // strCategoryThumb
-    
-    // jeg mangler at koble de forskellige API-strings, da de er forskellige
+    let title: String
+    let imageUrl: String
 }

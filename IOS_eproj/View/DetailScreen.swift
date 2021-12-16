@@ -37,9 +37,3 @@ struct DetailScreen: View {
         }
     }
 }
-
-struct DetailScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailScreen(recipeId: "52772")
-    }
-}

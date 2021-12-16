@@ -37,7 +37,6 @@ struct RecipeListView: View {
 }
 
 struct RecipeCellView: View {
-    
     // the recipe constant takes in a recipe cell from the view model and displays them
     let recipe: RecipeViewModel
     
@@ -55,12 +54,3 @@ struct RecipeCellView: View {
         }
     }
 }
-
-/*struct RecipeList_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        let CategoryVM = categoryViewModel(RecipeCategory(strCategory: "Beef", strCategoryThumb: "https://www.themealdb.com//images//category//beef.png"))
-        
-        RecipeList(recipeCategory: CategoryVM)
-    }
-} */

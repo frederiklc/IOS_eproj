@@ -12,7 +12,6 @@ struct CategoryList: View {
     @StateObject var model: categoryListVM = categoryListVM()
     
     var body: some View {
-
             // display our category list view
             CategoryListView(categories: model.Categories)
                 .task {
@@ -52,12 +51,6 @@ struct CategoryCellView: View {
             }
             Text(recipeCategory.title)
         }
-    }
-}
-
-struct CategoryList_Previews: PreviewProvider {
-    static var previews: some View {
-        CategoryList()
     }
 }
 

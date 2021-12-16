@@ -9,9 +9,7 @@ import SwiftUI
 import UIKit
 
 struct AddIngredient: View {
-    
     @Environment(\.managedObjectContext) private var viewContext
-    //@StateObject private var AddIngr = AddIngredientViewModel()
     
     @State var IngredientName: String = ""
     @State var IngredientQuantity: String = ""
@@ -43,8 +41,6 @@ struct AddIngredient: View {
     }
     
     func deleteIngredient(offsets: IndexSet) {
-        // Ingredients.quantity.remove(atOffsets: index)?
-        // Ingredients.name.remove(atOffsets: index)?
         withAnimation {
             offsets.map { ingredientslist[$0] }.forEach(viewContext.delete)
             PersistenceController.shared.saveContext()
@@ -55,12 +51,5 @@ struct AddIngredient: View {
         newIngredient.name = IngredientName
         newIngredient.quantity = Int64(IngredientQuantity) ?? 0
         PersistenceController.shared.saveContext()
-    }
-}
-
-struct AddIngredient_Previews: PreviewProvider {
-    static var previews: some View {
-        AddIngredient().environment(\.managedObjectContext,
-                                     PersistenceController.preview.container.viewContext)
     }
 }
