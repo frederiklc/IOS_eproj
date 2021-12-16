@@ -54,7 +54,6 @@ struct backButton: View {
     }
 }
 
-
 /*
 Image("ShoppingCart")
     .resizable()

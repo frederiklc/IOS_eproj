@@ -44,10 +44,7 @@ struct categoryViewModel: Identifiable { // identifiable so we can loop through 
     var title: String {
         Category.title
     }
-    
     var imageUrl: URL? {
         URL(string: Category.imageUrl)
     }
-    
-    
 }
