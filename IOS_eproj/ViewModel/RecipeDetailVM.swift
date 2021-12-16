@@ -16,7 +16,7 @@ class RecipeDetailVM: ObservableObject {
     func mergeRecipeDetail(recipeId: String) async {
         
         do { // async function needs try await as we're requesting content from the url
-            let mergeRecipeDetail = try await webCall().get(url: template.URLs.recipeById(recipeId)) { data in
+            let mergeRecipeDetail = try await webCall().get(url: URLs.recipeById(recipeId)) { data in
                 return try? JSONDecoder().decode(detailResponse.self, from: data)
             }
             

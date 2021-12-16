@@ -6,8 +6,6 @@
 //
 
 import Foundation
-
-struct template {
     
     struct URLs {
         
@@ -20,5 +18,3 @@ struct template {
             return URL(string: "https://recipesapi.herokuapp.com/api/v2/recipes/\(id)")!
         }
     }
-    
-}

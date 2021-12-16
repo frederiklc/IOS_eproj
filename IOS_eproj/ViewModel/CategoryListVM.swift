@@ -16,7 +16,7 @@ class categoryListVM: ObservableObject {
     func populateCategories() async {
         
         do { // async function needs try await as we're requesting content from the url
-            let CategoryResponse = try await webCall().get(url: template.URLs.categoryURL) { data in
+            let CategoryResponse = try await webCall().get(url: URLs.categoryURL) { data in
                 return try? JSONDecoder().decode(categoryResponse.self, from: data)
             }
             self.Categories = CategoryResponse.categories.map(categoryViewModel.init)
